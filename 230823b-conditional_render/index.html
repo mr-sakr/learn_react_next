@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Render</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        function HomePage(){
+            const [status, setStatus] = React.useState(true);
+            function toggle_status(){
+                setStatus(!status)
+            }
+            
+            let isExistUser = status;
+            let content;
+            if(isExistUser){
+                content = <Login />
+            }else{
+                content = <Register />
+            }
+
+            
+
+            return(
+                <>
+                    <button onClick={toggle_status}>Change Form</button>
+                    {content}
+                </>
+            )
+        }
+
+        function Login(){
+            return(
+                <div>
+                    <h1>Login</h1>
+                    <form action="login_form" style={{display:'flex', flexDirection: 'column'}}>
+                        <input type="text" name="username" />
+                        <input type="text" name="password" />
+                        <input type="submit"/>
+                    </form>
+                </div>
+            )
+        }
+
+        function Register(){
+            return(
+                <div>
+                    <h1>Register</h1>
+                    <form action="register_form" style={{display:'flex', flexDirection: 'column'}}>
+                        <input type="text" name="fname" />
+                        <input type="text" name="lname" />
+                        <input type="text" name="username" />
+                        <input type="text" name="email" />
+                        <input type="text" name="mobile" />
+                        <input type="text" name="password" />
+                        <input type="text" name="repeat_password" />
+                        <input type="submit"/>
+                    </form>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<HomePage />, app)
+    </script>
+    
+
+</body>
+</html>

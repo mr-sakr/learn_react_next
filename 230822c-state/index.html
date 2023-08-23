@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        function HomePage(){
+            const [likes, setLikes] = React.useState(8);
+
+            function increase(){
+                setLikes(likes+1)
+            }
+            return(
+                <div>
+                    <h1>State</h1>
+                    <button onClick={increase}>Like {likes}</button>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<HomePage />, app)
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying Data</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        const user = {
+            name: 'Mahmoud',
+            'nick_name': 'Sakr',
+            'mob': '01555513848',
+            'email': 'sakr.bzns@gmail.com'
+        }
+
+        function HomePage(){
+            return(
+                <>
+                    <h1>Hello</h1>
+                    <div>
+                        <p>Username : {user.name} {user.nick_name}</p>
+                        <p>Mobile: {user.mob}</p>
+                        <p>Email: {user.email}</p>
+                    </div>
+                </>
+            )
+        }
+
+        ReactDOM.render(<HomePage />, app)
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        function HomePage(){
+            return(
+                <div>
+                    <Nav/>
+                    <Content />
+                </div>
+            )
+        }
+
+        function Nav(){
+            return(
+                <>
+                    <h1>Navbar</h1>
+                    <ul>
+                        <li><Link target_page="Home" info="Products"/></li>
+                        <li><Link target_page="About" info="Us"/></li>
+                        <li><Link target_page="Contact" info="Our Contacts"/></li>
+                        <li><Link target_page="Media" info="Our Photos"/></li>
+                    </ul>
+                    <hr/>
+                </>
+            )
+        }
+
+        function Content(){
+            const names = ['Mahmoud', 'Sakr', '7ode', 'Abo Mohamed', 'Abo Elias'];
+            return(
+                <div>
+                    <h1>Content for fetch data</h1>
+                    <h3>My Names:</h3>
+                    <ul>
+                        {names.map((name)=>(
+                            <li key={name}>{name}</li>
+                        ))}
+                    </ul>
+                    <hr/>
+                </div>
+            )
+        }
+
+        
+
+        function Link(props){
+            return <button>Go to {props.target_page}, for get information about {props.info}</button>
+        }
+
+        ReactDOM.render(<HomePage />, app)
+    </script>
+    
+
+</body>
+</html>

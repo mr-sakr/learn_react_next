@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="babel.min.js"></script>
+
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        function HomePage(){
+            return(
+                <div>
+                    <Nav/>
+                    <Content />
+                    <Footer />
+                </div>
+            )
+        }
+
+        function Nav(){
+            return(
+                <>
+                    <h1>Navbar</h1>
+                    <ul>
+                        <li>Home <Link/></li>
+                        <li>About <Link/></li>
+                        <li>Contact Us <Link/></li>
+                        <li>Media <Link/></li>
+                    </ul>
+                    <hr/>
+                </>
+            )
+        }
+
+        function Content(){
+            return(
+                <div>
+                    <h1>Content</h1>
+                    <h3>This is Content</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, reprehenderit!</p>
+                    <hr/>
+                </div>
+            )
+        }
+
+        function Footer(){
+            return(
+                <div>
+                    <h1>Footer</h1>
+                    <div>This is Footer</div>
+                </div>
+            )
+        }
+
+        function Link(){
+            return <button>Click Here</button>
+        }
+
+        ReactDOM.render(<HomePage />, app)
+    </script>
+    
+
+</body>
+</html>
