@@ -1,0 +1,13 @@
+Install a new project by terminal :
+npx create-next-app
+    What is your project named? my-app  -------> (write the project name)
+    Would you like to use TypeScript? No / Yes  -------> (choose No, we didn't learn TS yet)
+    Would you like to use ESLint? No / Yes  -------> (choose Yes, It fix the codes automatically)
+    Would you like to use Tailwind CSS? No / Yes  -------> (choose No, we didn't learn Tailwind yet)
+    Would you like to use `src/` directory? No / Yes  -------> (choose Yes, to be more organised)
+    Would you like to use App Router? (recommended) No / Yes  -------> (choose Yes)
+    Would you like to customize the default import alias? No / Yes  -------> (choose Yes, to make it easy)
+    What import alias would you like configured? @/*  -------> (just click tap button)
+
+
+After that run the project after it is ready by the command line : npm run dev
