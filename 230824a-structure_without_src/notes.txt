@@ -1,0 +1,5 @@
+* We create this project for check the difference between using src and not use it,
+
+* You can check the next project which we use src in it, using src is better and more organised.
+
+* Just they put app directory inside src directory.

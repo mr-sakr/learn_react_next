@@ -1,0 +1,13 @@
+* We create this app using src
+
+* In src/app : You can find the file of page.js 
+This file is consider the home page, in this version, page.js is like index.js
+
+* If you need to create folder posts for example, you must create a file in a name of page.js also as an index
+
+
+* You can add classes in globals.css and use this className in the files, because this file is a global,
+not customised for one file only, because it was imported in layout.js file.
+
+
+
