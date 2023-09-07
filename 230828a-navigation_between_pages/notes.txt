@@ -1,0 +1,25 @@
+* Problem : You may see the error red underline import or export words, and if you go to this word to check the error,
+You will find the error as follows :
+    nextjs Parsing error: Cannot find module 'next/babel'
+
+Solution : 
+    In your NextJS Project you have this file , named .eslintrc.json, In this file you have following code
+
+    {
+    "extends": "next/core-web-vitals"
+    }
+
+    Replace it with 
+
+    {
+    "extends": ["next/babel","next/core-web-vitals"]
+    }
+
+    Note: If you only replace with
+
+    {
+    "extends": ["next/babel"]
+    }
+    The red error sign will go but the code won't compile and gives compile error.
+
+----------------------------------------------------------

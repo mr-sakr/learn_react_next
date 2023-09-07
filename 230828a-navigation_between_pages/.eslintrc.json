@@ -1,0 +1,5 @@
+{
+  // "extends": "next/core-web-vitals",  You need to add "next/babel"
+  "extends": ["next/babel","next/core-web-vitals"]
+
+}

@@ -1,0 +1,33 @@
+Assets :
+
+For images : 
+    Create images directory in public folder, and save your asset images in this directory.
+
+    You should use <Image/> component instead of <img/> tag to display it,
+    This will enable you to make the image Responsive, Optimized and it will be loaded just only when it enter the viewport.
+
+    Image component makes you avoid CLS [Cumulative Layout Shift] : 
+        CLS : For example, if a website visitor loaded a page and, while they were reading it,
+            a banner loads and the page jumps down,
+            that would constitute a large CLS score.
+
+    Image component help you regarding Core Web Vital that Google is going to use in search ranking.
+
+
+    We will use Image Component as follows :
+
+    import Image from 'next/image';
+    const YourComponent = () => (
+    <Image
+        src="/images/profile.jpg" // Route of the image file
+        height={144} // Desired size with correct aspect ratio
+        width={144} // Desired size with correct aspect ratio
+        alt="Your Name"
+    />
+    );
+
+
+    * Note that you must identify the width and height as follows :
+    <Image src="/images/logo.jpg" width={200} height={200}/>
+
+-------------------------------------

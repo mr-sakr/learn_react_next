@@ -1,0 +1,24 @@
+Before, in pages router : the Head component was used as follows :
+    import Head from "next/head"
+
+    export default function Home() {
+    return (
+        <main>
+            <Head>
+                <title>Home Page</title>
+            </Head>
+            <h1>This is : Home Page</h1>
+            <h2>
+                <Link href="/contact">Contact Page</Link>
+            </h2>
+        </main>
+    )
+    }
+
+But, now in App router, we don't import Head component nor use it, 
+but export const by name metadata as follows :
+
+    export const metadata = {
+        title: 'Contact Page',
+        description: 'Contact Us we are here',
+    }
