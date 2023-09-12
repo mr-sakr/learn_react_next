@@ -1,0 +1,15 @@
+* Note that useState became used only in client component not server component and the rest of hooks also.
+
+So, to use useState, you must write 'use client' in the beginning of the client component to identify it.
+
+
+we must import useState firstly like this : import { useState } from "react"
+
+we must use useState inside the body of the function component.
+
+--------------------
+
+If we need to use (for) attr. to any element, we must write it as follows : (htmlFor)
+Like changing (class) to (className).
+
+
